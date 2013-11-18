@@ -101,7 +101,7 @@ print "<pre>";
 print "sudo make distclean " ;
 print "</pre>";
 print "<pre>";
-print "./configure && make " ;
+print "./configure &amp;&amp; make " ;
 print "</pre>";
 print "<pre>";
 print "sudo make uninstall" ;

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-17 16:57+0100\n"
+"POT-Creation-Date: 2013-11-18 17:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -380,14 +380,14 @@ msgstr ""
 msgid "Open-UDC repository"
 msgstr ""
 
-#: text/2.php:10
+#: text/2.php:9
 #, php-format
 msgid ""
 "Github <a href=\"https://github.com/Open-UDC\">https://github.com/Open-UDC</"
 "a>"
 msgstr ""
 
-#: text/2.php:13
+#: text/2.php:12
 #, php-format
 msgid ""
 "Bug trackers <a href=\"https://github.com/Open-UDC/open-udc/issues\">https://"
@@ -406,35 +406,35 @@ msgstr ""
 msgid "contribute,developer,contact"
 msgstr ""
 
-#: text/3.php:4
+#: text/3.php:3
 #, php-format
 msgid "Contacts"
 msgstr ""
 
-#: text/3.php:8
+#: text/3.php:6
 #, php-format
-msgid "Chartroom Jabber/XMPP: \"open-udc@muc.jappix.com\""
+msgid "Chartroom Jabber/XMPP: \"open-udc@muc.jappix.com\"."
 msgstr ""
 
-#: text/3.php:11
+#: text/3.php:9
 #, php-format
 msgid ""
 "Mailing list \"openudc AT googlegroups DOT com\" <a href=\"https://groups."
 "google.com/forum/#!forum/openudc\">https://groups.google.com/forum/#!forum/"
-"openudc</a>"
+"openudc</a>."
 msgstr ""
 
-#: text/3.php:15
+#: text/3.php:12
 #, php-format
 msgid "Chat-room how-to"
 msgstr ""
 
-#: text/3.php:18
+#: text/3.php:15
 #, php-format
 msgid "Join the chat-room at \"open-udc@muc.jappix.com\"."
 msgstr ""
 
-#: text/3.php:21
+#: text/3.php:18
 #, php-format
 msgid ""
 "You can easily create an XMPP account on <a href=\"https://jappix.com"
@@ -442,34 +442,34 @@ msgid ""
 "xmpp.net\">http://xmpp.net</a>."
 msgstr ""
 
-#: text/3.php:24
+#: text/3.php:21
 #, php-format
 msgid "After you can:"
 msgstr ""
 
-#: text/3.php:28
+#: text/3.php:25
 #, php-format
 msgid ""
 "clicking on Discussion in the bottom right hand corner of the OpenUDC web "
 "site;"
 msgstr ""
 
-#: text/3.php:31
+#: text/3.php:28
 #, php-format
 msgid "using the Jabber compatible web-client Jappix;"
 msgstr ""
 
-#: text/3.php:34
+#: text/3.php:31
 #, php-format
 msgid "using MiniJappix on your own site;"
 msgstr ""
 
-#: text/3.php:37
+#: text/3.php:34
 #, php-format
 msgid "install and use a free XMPP client (probably the best way)."
 msgstr ""
 
-#: text/3.php:41
+#: text/3.php:38
 #, php-format
 msgid ""
 "Recommended XMPP clients: <a href=\"http://gajim.org/\">Gajim</a>, <a href="

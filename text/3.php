@@ -1,16 +1,13 @@
 <?php
-print "</ul>";
 print "<h2>";
 printf(_("Contacts"));
 print "</h2>";
-print "<ul>";
-print "<li>";
-printf(_("Chartroom Jabber/XMPP: \"open-udc@muc.jappix.com\""));
-print "</li>";
-print "<li>";
-printf(_("Mailing list \"openudc AT googlegroups DOT com\" <a href=\"https://groups.google.com/forum/#!forum/openudc\">https://groups.google.com/forum/#!forum/openudc</a>"));
-print "</li>";
-print "</ul>";
+print "<p>";
+printf(_("Chartroom Jabber/XMPP: \"open-udc@muc.jappix.com\"."));
+print "</p>";
+print "<p>";
+printf(_("Mailing list \"openudc AT googlegroups DOT com\" <a href=\"https://groups.google.com/forum/#!forum/openudc\">https://groups.google.com/forum/#!forum/openudc</a>."));
+print "</p>";
 print "<h2>";
 printf(_("Chat-room how-to"));
 print "</h2>";

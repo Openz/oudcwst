@@ -5,11 +5,10 @@ print "</p>";
 print "<h2>";
 printf(_("Open-UDC repository"));
 print "</h2>";
-print "<ul>";
-print "<li>";
+print "<p>";
 printf(_("Github <a href=\"https://github.com/Open-UDC\">https://github.com/Open-UDC</a>"));
-print "</li>";
-print "<li>";
+print "</p>";
+print "<p>";
 printf(_("Bug trackers <a href=\"https://github.com/Open-UDC/open-udc/issues\">https://github.com/Open-UDC/open-udc/issues</a>"));
-print "</li>";
+print "</p>";
 ?>

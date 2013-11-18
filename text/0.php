@@ -92,5 +92,5 @@ print "</h3>";
 print "<p>";
 printf(_("When a node collect a transaction, it informs immediately two other nodes. Then these others nodes inform two other nodes and so on. It's an exponential speed. Each node know before the nodes it has to inform. When a new node connect or disconnect to the system, new communication rules are automatically calculated."));
 print "</p>";
-print "<div class=\"carousel\"><ul><li><img src=\"graph/node.svg\" width=\"80%\" /></li><li><img src=\"graph/node1.svg\"/></li><li><img src=\"graph/node2.svg\" width=\"80%\" /></li><li><img src=\"graph/node3.svg\" width=\"80%\" /></li><li><img src=\"graph/node4.svg\" width=\"80%\" /></li><li><img src=\"graph/node5.svg\" width=\"80%\"/></li></ul></div>";
+print "<div class=\"carousel\"><ul><li><img src=\"graph/node.svg\" width=\"80%\" alt=\"node\" /></li><li><img src=\"graph/node1.svg\" alt=\"node1\" /></li><li><img src=\"graph/node2.svg\" width=\"80%\" alt=\"node2\" /></li><li><img src=\"graph/node3.svg\" alt=\"node3\" width=\"80%\" /></li><li><img src=\"graph/node4.svg\" width=\"80%\" alt=\"node4\" /></li><li><img src=\"graph/node5.svg\" alt=\"node5\" width=\"80%\"/></li></ul></div>";
 ?>

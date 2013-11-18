@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-18 17:30+0100\n"
+"POT-Creation-Date: 2013-11-18 17:26+0100\n"
 "PO-Revision-Date: 2013-11-17 16:06+0100\n"
 "Last-Translator: Pierro <openz@laposte.net>\n"
 "Language-Team: \n"
@@ -64,7 +64,7 @@ msgstr "Une toile de confiance dans une communauté humaine"
 msgid "Accounts are \"keys\""
 msgstr ""
 
-#: text/3.php:21
+#: text/3.php:23
 #, php-format
 msgid "After you can:"
 msgstr "Après vous pouvez:"
@@ -102,12 +102,12 @@ msgid ""
 "github.com/Open-UDC/open-udc/issues</a>"
 msgstr ""
 
-#: text/3.php:6
+#: text/3.php:7
 #, php-format
-msgid "Chartroom Jabber/XMPP: \"open-udc@muc.jappix.com\"."
+msgid "Chartroom Jabber/XMPP: \"open-udc@muc.jappix.com\""
 msgstr ""
 
-#: text/3.php:12
+#: text/3.php:14
 #, php-format
 msgid "Chat-room how-to"
 msgstr ""
@@ -264,7 +264,7 @@ msgid ""
 "OpenGPG/OpenUDC key ID."
 msgstr ""
 
-#: text/3.php:15
+#: text/3.php:17
 #, php-format
 msgid "Join the chat-room at \"open-udc@muc.jappix.com\"."
 msgstr ""
@@ -299,12 +299,12 @@ msgid ""
 "&#37; per month)."
 msgstr ""
 
-#: text/3.php:9
+#: text/3.php:10
 #, php-format
 msgid ""
 "Mailing list \"openudc AT googlegroups DOT com\" <a href=\"https://groups."
 "google.com/forum/#!forum/openudc\">https://groups.google.com/forum/#!forum/"
-"openudc</a>."
+"openudc</a>"
 msgstr ""
 
 #: text/0.php:68
@@ -382,7 +382,7 @@ msgstr "Préparez les dépendances"
 msgid "Project1"
 msgstr "Le projet"
 
-#: text/3.php:38
+#: text/3.php:40
 #, php-format
 msgid ""
 "Recommended XMPP clients: <a href=\"http://gajim.org/\">Gajim</a>, <a href="
@@ -589,7 +589,7 @@ msgstr ""
 "Testez sur votre explorateur l'adresse :  http://127.0.0.1:11371/ et vous "
 "accédez au noeud OpenUDC"
 
-#: text/3.php:18
+#: text/3.php:20
 #, php-format
 msgid ""
 "You can easily create an XMPP account on <a href=\"https://jappix.com"
@@ -627,7 +627,7 @@ msgid ""
 "have:"
 msgstr ""
 
-#: text/3.php:25
+#: text/3.php:27
 #, php-format
 msgid ""
 "clicking on Discussion in the bottom right hand corner of the OpenUDC web "
@@ -646,7 +646,7 @@ msgstr ""
 msgid "free money"
 msgstr ""
 
-#: text/3.php:34
+#: text/3.php:36
 #, php-format
 msgid "install and use a free XMPP client (probably the best way)."
 msgstr ""
@@ -655,12 +655,12 @@ msgstr ""
 msgid "monnaie,free money,universal dividend money system"
 msgstr ""
 
-#: text/3.php:31
+#: text/3.php:33
 #, php-format
 msgid "using MiniJappix on your own site;"
 msgstr ""
 
-#: text/3.php:28
+#: text/3.php:30
 #, php-format
 msgid "using the Jabber compatible web-client Jappix;"
 msgstr "utiliser le client Web Jappix;"
