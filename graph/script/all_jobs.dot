@@ -1,0 +1,90 @@
+digraph G { 
+layout="circo";
+
+edge [color="#2A3845"]; 
+node [fontsize=30];
+
+node [style=filled,color="#7c93a0"];
+
+
+O[
+shape=octagon
+label="OpenUDC"
+]
+
+a[
+shape=box
+label="LINE1"
+color="#adc4e6"
+];
+
+b[
+shape=box
+label="LINE2"
+color="#adc4e6"
+];
+
+c[
+shape=box
+label="LINE3"
+color= "#adc4e6"
+];
+
+d[
+shape=box
+label="LINE4"
+color= "#ade6bf"
+];
+
+e[
+shape=box
+label="LINE5"
+color= "#ade6bf"
+];
+f[
+shape=box
+label="LINE6"
+color= "#ade6bf"
+];
+
+g[
+shape=box
+label="LINE7"
+color="#e6dfad"
+];
+
+h[
+shape=box
+label="LINE8"
+color="#e6dfad"
+];
+
+i[
+shape=box
+label="LINE9"
+color="#e6adad"
+];
+
+j[
+shape=box
+label="LINE10"
+color="#e6adad"
+];
+
+
+
+
+
+
+a -> O [ label=" ",color="#2A3845",arrowhead="dot",penwidth=3 ];
+b -> O [ label=" ",color="#2A3845",arrowhead="dot",penwidth=3 ];
+c -> O [ label=" ",color="#2A3845",arrowhead="dot",penwidth=3  ];
+d -> O [ label=" ",color="#2A3845",arrowhead="dot",penwidth=3  ];
+e -> O [ label=" ",color="#2A3845",arrowhead="dot",penwidth=3  ];
+f -> O [ label=" ",color="#2A3845",arrowhead="dot",penwidth=3  ];
+g -> O [ label=" ",color="#2A3845",arrowhead="dot",penwidth=3  ];
+h -> O [ label=" ",color="#2A3845",arrowhead="dot" ,penwidth=3 ];
+i -> O [ label=" ",color="#2A3845",arrowhead="dot" ,penwidth=3 ];
+j -> O [ label=" ",color="#2A3845",arrowhead="dot",penwidth=3  ];
+
+}

@@ -1,0 +1,80 @@
+digraph G { 
+layout="circo";
+edge [color="#2A3845"]; 
+node [fontsize=30,height =1
+];
+mindist=3;
+node [style=filled,color="#7c93a0",arrowhead="none",penwidth=1];
+
+
+
+a[
+shape=doublecircle
+color="#e6adad"
+label=""
+];
+
+b[
+shape=doublecircle
+label=""
+];
+
+c[
+shape=doublecircle
+label=""
+
+];
+
+d[
+shape=doublecircle
+label=""
+
+];
+
+e[
+shape=doublecircle
+label=""
+
+];
+
+
+f[
+shape=doublecircle
+label=""
+
+];
+g[
+shape=doublecircle
+label=""
+
+];
+
+a -> b [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+a -> c [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+a -> d [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+a -> e [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+a -> f [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+a -> g [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+
+b -> c [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+b -> d [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+b -> e [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+b -> f [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+b -> g [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+
+c -> d [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+c -> e [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+c -> f [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+c -> g [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+
+d -> e [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+d -> f [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+d -> g [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+
+e -> f [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+e -> g [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+
+f -> g [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+
+
+}

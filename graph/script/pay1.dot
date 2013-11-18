@@ -1,0 +1,37 @@
+digraph G { 
+
+
+edge [color="#2A3845"]; 
+node [fontsize=30];
+node [color=white];
+nodesep=3;
+
+
+m1[image="man.svg", label="A",shape=none];
+m2[image="man.svg", label="B",shape=none];
+
+
+
+
+bon [shape=record,label=<
+	<TABLE BGCOLOR="#e6dfad">
+		<TR><TD BGCOLOR="#e6adad" >  LINE1  </TD></TR> 
+		<TR><TD >  <BR/>LINE2<BR/>  </TD></TR> 
+	</TABLE> >]
+a[
+shape=doublecircle
+style=filled
+color="#7c93a0"
+label="LINE3"
+];
+
+#salade[shape=doublecircle,style=filled,color="#7c93a0",label="Noeud"];
+
+m1 -> bon -> a [ label=" ",color="#2A3845",penwidth=2  ];
+a -> m2 [ label="LINE4",fontsize=23,color="#2A3845",style=dashed,penwidth=1  ];
+
+#m2 -> salade -> m1
+
+
+{rank=same; m1 m2}
+}

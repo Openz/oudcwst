@@ -1,0 +1,55 @@
+digraph G { 
+layout="circo";
+edge [color="#2A3845"]; 
+node [fontsize=30,height =1
+];
+mindist=3;
+node [style=filled,color="#7c93a0",arrowhead="none",penwidth=1];
+
+
+
+a[
+shape=doublecircle
+color="#e6adad"
+label=""
+];
+
+b[
+shape=doublecircle
+label=""
+];
+
+c[
+shape=doublecircle
+label=""
+
+];
+
+d[
+shape=doublecircle
+label=""
+
+];
+
+e[
+shape=doublecircle
+label=""
+
+];
+
+
+
+a -> b [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+a -> c [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+a -> d [ label="1",color="#e6adad",arrowhead="vee",arrowsize="2",penwidth=3 ];
+a -> e [ label="1",color="#e6adad",arrowhead="vee",arrowsize="2",penwidth=3 ];
+b -> c [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+b -> d [ label=" ",color="#2A3845",arrowhead="none",penwidth=1 ];
+e -> b [ label="2",color="#e6adad",arrowhead="vee",arrowsize="2",penwidth=3 ];
+c -> d [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+e -> c [ label="2",color="#e6adad",arrowhead="vee",arrowsize="2",penwidth=3  ];
+d -> e [ label=" ",color="#2A3845",arrowhead="none",penwidth=1  ];
+
+
+
+}

@@ -1,0 +1,29 @@
+digraph G { 
+
+layout="circo";
+edge [color="#2A3845"]; 
+node [fontsize=30];
+node [color=white];
+mindist=2;
+
+
+m1[image="man.svg", label="",shape=none];
+m2[image="man.svg", label="",shape=none];
+m3[image="man.svg", label="",shape=none];
+m4[image="man.svg",label="",shape=none];
+m5[image="man.svg", label="",shape=none];
+m6[image="man.svg", label="",shape=none];
+#m1[shape=epsf, shapefile="man.ps"];
+
+m2 -> m3 [ label=" ",color="#2A3845",arrowhead="vee",arrowsize="2",penwidth=3 ];
+m3 -> m2 [ label=" ",color="#2A3845",arrowhead="vee",arrowsize="2",penwidth=3 ];
+m3 -> m4 [ label=" ",color="#2A3845",arrowhead="vee",arrowsize="2",penwidth=3 ];
+m4 -> m6 [ label=" ",color="#2A3845",arrowhead="vee",arrowsize="2",penwidth=3 ];
+m5 -> m2 [ label=" ",color="#2A3845",arrowhead="vee",arrowsize="2",penwidth=3 ];
+m6 -> m4 [ label=" ",color="#2A3845",arrowhead="vee",arrowsize="2",penwidth=3 ];
+
+m4 -> m1 [ label=" ",color="#2A3845",arrowhead="vee",arrowsize="2",penwidth=3 ];
+m1 -> m4 [ label=" ",color="#2A3845",arrowhead="vee",arrowsize="2",penwidth=3 ];
+m3 -> m6 [ label=" ",color="#2A3845",arrowhead="vee",arrowsize="2",penwidth=3 ];
+m6 -> m5 [ label=" ",color="#2A3845",arrowhead="vee",arrowsize="2",penwidth=3 ];
+}

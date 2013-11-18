@@ -1,0 +1,63 @@
+#! /bin/bash
+
+
+
+type="svg"
+
+mkdir -p output
+
+# Compute graphs without text to translate
+dot -T${type} mens.dot -o ../mens.${type}
+#convert -geometry  800  ../mens.${type}  ../mens.jpg
+
+dot -T${type} node.dot -o ../node.${type}
+dot -T${type} node1.dot -o ../node1.${type}
+dot -T${type} node2.dot -o ../node2.${type}
+dot -T${type} node3.dot -o ../node3.${type}
+dot -T${type} node4.dot -o ../node4.${type}
+dot -T${type} node5.dot -o ../node5.${type}
+for L in $(ls -1 lang/*);do
+
+	lang=$(basename "${L}")
+
+	for i in all_jobs pay1 pay2;do
+
+		cat ${L} | egrep '^'${i} | awk -F"\t" '{print $2}' > zpxllxplx
+		#dot -T${type} all_jobs.dot -o ../all_jobs_${lang}.${type}
+		awk  '
+			BEGIN { 
+				n=1
+				while ( ( getline lang < "zpxllxplx" ) > 0) { 
+					change[n]=lang
+					n++
+				} 
+			}
+		 
+			{
+				a=$0
+				for ( line in change) {
+					gsub("LINE"line,change[line],a)
+				}
+
+			print a
+
+			}' ${i}.dot | dot -T${type} -o ../${i}_${lang}.${type}
+		#rm zpxllxplx
+
+	done
+
+
+#	for i in pay1 pay2;do
+#		convert -geometry  800  ../${i}_${lang}.${type}  ../${i}_${lang}.jpg
+#	done
+
+done
+
+
+
+
+
+
+
+
+

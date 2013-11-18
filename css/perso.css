@@ -1,0 +1,79 @@
+.top-bar {
+/*	opacity: 0.9;
+background-color:#1B1B1B;*/
+
+background : url(../img/bg.png) repeat-x;
+background-color:#1b5f1b;
+}
+
+
+
+.bottom-bar {
+background : url(../img/bg2.png) repeat-x;
+background-color:#1b5f1b;
+
+
+}
+
+a,
+a:visited {
+  color: #1b5f1b;
+  text-decoration: none;
+}
+
+.breadcrumb {
+  background: #f5f5f5;
+  border-radius: 5px;
+  border: 1px solid #ddddd;
+}
+
+
+
+.breadcrumb li:not(:last-child):after {
+  content: '   ';
+}
+
+.breadcrumb li a {
+color: #1b5f1b;
+}
+
+
+
+.fig_comment
+{
+  color: #777;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: cursive;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+.img {
+text-align: center;
+
+}
+.menu {
+
+  background: #1b5f1b;
+
+}
+.menu li a {
+background : url(../img/bg.png) repeat-x;
+  text-decoration: none;
+  color: #ffffff;
+}
+.menu > li:hover > a {
+
+background : url(../img/bg.png) repeat-x;
+background-color:#459b45;
+}
+
+.leaflet-top {
+	top: 43px;
+}
+.masthead{background:#9292e8;color:#fff;padding:20px 0;}
+
+.z{;position:fixed;}
+
+

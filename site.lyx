@@ -1,0 +1,733 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+OpenUDC
+\begin_inset Newline newline
+\end_inset
+
+Web site texts
+\end_layout
+
+\begin_layout Author
+Pierro
+\end_layout
+
+\begin_layout Section
+Project1
+\end_layout
+
+\begin_layout Subsection
+OpenUDC project
+\end_layout
+
+\begin_layout Verse
+description=OpenUDC
+\end_layout
+
+\begin_layout Verse
+keywords=monnaie,free money,universal dividend money system
+\end_layout
+
+\begin_layout Standard
+OpenUDC is a set of free softwares designed to create a free money system
+ based on a decentralised human P2P network.
+\end_layout
+
+\begin_layout Standard
+The softwares are under <a title="WikiPedia" href="http://en.wikipedia.org/wiki/AG
+PL">AGPL</a> et <a title="WikiPedia" href="http://en.wikipedia.org/wiki/LGPL">LGPL
+</a>.
+\end_layout
+
+\begin_layout Quotation
+$coment=sprintf(_("Convergence of skills OpenUDC"));
+\end_layout
+
+\begin_layout Quotation
+get_image_in_langage("graph/all_jobs","svg","100%", $coment);
+\end_layout
+
+\begin_layout Subsubsection
+Free Money system
+\end_layout
+
+\begin_layout Standard
+The OpenUDC softwares are designed to manage a free money system as described
+ by the TRM (Théorie Relative de la Monnaie), that means a money system
+ where no human has privileges in front of money creation either in time
+ or in space.
+\end_layout
+
+\begin_layout Standard
+These money systems solutions are Universal Dividend based money systems.
+ Every member in the community create (equal to receive) the same Universal
+ Dividend per period of time.
+ 
+\end_layout
+
+\begin_layout Standard
+OpenUDC development chosen rule is described in the FAQ.
+\end_layout
+
+\begin_layout Standard
+OpenUDC allow each community who want to use it's own free money to describe
+ it's own Universal Dividend set of rules.
+\end_layout
+
+\begin_layout Subsubsection
+Human P2P network
+\end_layout
+
+\begin_layout Quotation
+$coment=sprintf(_("A web of trust in a human community"));
+\end_layout
+
+\begin_layout Quotation
+get_image("graph/mens","svg","80%",$coment );
+\end_layout
+
+\begin_layout Standard
+The OpenUDC human P2P network is based on <a href="http://en.wikipedia.org/wiki/Op
+enPGP">OpenPGP</a>.
+ There is an OpenPGP Web of Trust which identify the members of one OpenUDC
+ community sharing the same free money.
+\end_layout
+
+\begin_layout Standard
+A new member entering the money system has to be signed by a determined
+ (paramater of the money system) number of existing members.
+ A member yet existing in the money system has to renew periodicly signing
+ in a period of time (other parameter of the money system), as a renewable
+ proof of life.
+ 
+\end_layout
+
+\begin_layout Standard
+So there is no center, no centralised organism in an OpenUDC money system.
+\end_layout
+
+\begin_layout Subsubsection
+Exchanges
+\end_layout
+
+\begin_layout Standard
+Exchanges are made directly from person to person in "digital coins".
+ The sender announce to the system the amount and and the receiver, he signs
+ it, and then send it to one node.
+ The node makes a propagation of the information, and when the whole system
+ fully validate the transaction, the receiver has the information.
+\end_layout
+
+\begin_layout Quotation
+$coment=sprintf(_("A gives money to B (mode1 transaction)"));
+\end_layout
+
+\begin_layout Quotation
+get_image_in_langage("graph/pay1","svg","80%",$coment );
+\end_layout
+
+\begin_layout Subsubsection
+OpenUDC nodes
+\end_layout
+
+\begin_layout Standard
+A node is an instance of OpenUDC software, connected to other nodes.
+ All thoses P2P connected nodes know the OpenUDC Web of Trust, and share
+ the same database in a synchronised way.
+ So the database itself is a P2P shared database containing the whole Monetary
+ Mass.
+ So each member of an OpenUDC money system canhave it's own node and own
+ copy of the updated OpenUDC Web of Trust and OpenUDC Monetary Mass.
+ 
+\end_layout
+
+\begin_layout Quotation
+$coment=sprintf(_("A Network nodes"));
+\end_layout
+
+\begin_layout Quotation
+get_image("graph/node","svg","80%",$coment );
+\end_layout
+
+\begin_layout Subsection
+Technical choices 
+\end_layout
+
+\begin_layout Subsubsection
+Digital coins 
+\end_layout
+
+\begin_layout Standard
+Each digital coin is identified in an unique way.
+ It contains the information of it's date of creation, creation owner (the
+ member who was the base of that unit creation), and of course the up-to-date
+ owner of that coin.
+ These digital coins are technically available in different sizes as powers
+ of 2 : 2^0, or 2^1, or 2^2, 2^3 etc...
+ This choice is due to optimisation of memory space, and also due to growing
+ quantitative monetary mass.
+ 
+\end_layout
+
+\begin_layout Standard
+Note1 : OpenUDC system has to show always the information on a relative
+ units, so quantative units can be seen only for technical base.
+ On it's own account a member has a number a quantitive units Q, he can
+ count on number of Universal Dividend making the calculation account :
+ Q / UD.
+\end_layout
+
+\begin_layout Standard
+In relative units the monetary Mass don't grow in number of UD units, there
+ is always a maximum average of 1 / c Universal Dividend per member, so
+ in the relative unit UD there is not really monetary growth.
+\end_layout
+
+\begin_layout Standard
+Note2 : The OpenUDC digital coins are all in the P2P shared database, and
+ so there is no possibility for those coins to be lost (you could lose your
+ private OpenUDC Web of Trust Key, but that problem can be solved by other
+ ways than the OpenUDC system itself).
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Accounts are "keys"
+\end_layout
+
+\begin_layout Standard
+To obtain an account, it is enough to create it, and then to be signed by
+ a determined number of existing members.
+ Account will be activated only when the system rules will be fully ok.Practicall
+y you create an OpenUDC WoT private key, and an OpenUDC WoT public key,
+ associated with a specific OpenUDC information named UDID2 information.
+ 
+\end_layout
+
+\begin_layout Standard
+With those keys you can access to transactions of your own account, send
+ to or receive from others.
+ You sign and encrypt a "digital order" to send, and then the node recognise
+ you, and make the job.
+ When it's fully ok, the receiver has the complete information and some
+ digital coins have change of owner.
+ Work of the nodes When a node receive an encrypted "digital order" it recognise
+d the sender, and he is able to decrypt it and work on it.
+ The node makes verifications that the sender is the owner of each digital
+ coins of the digital order.
+\end_layout
+
+\begin_layout Quotation
+$coment=sprintf(_("A gives money to B (mode1 transaction)"));
+\end_layout
+
+\begin_layout Quotation
+get_image_in_langage("graph/pay1","svg","80%",$coment );
+\end_layout
+
+\begin_layout Quotation
+$coment=sprintf(_("A gives money to B (mode2 transaction)"));
+\end_layout
+
+\begin_layout Quotation
+get_image_in_langage("graph/pay2","svg","80%",$coment );
+\end_layout
+
+\begin_layout Subsubsection
+Communication between nodes
+\end_layout
+
+\begin_layout Standard
+When a node collect a transaction, it informs immediately two other nodes.
+ Then these others nodes inform two other nodes and so on.
+ It's an exponential speed.
+ Each node know before the nodes it has to inform.
+ When a new node connect or disconnect to the system, new communication
+ rules are automatically calculated.
+\end_layout
+
+\begin_layout LyX-Code
+<div class="carousel"><ul><li><img src="graph/node.svg" width="80%" /></li><li><i
+mg src="graph/node1.svg"/></li><li><img src="graph/node2.svg" width="80%"
+ /></li><li><img src="graph/node3.svg" width="80%" /></li><li><img src="graph/nod
+e4.svg" width="80%" /></li><li><img src="graph/node5.svg" width="80%"/></li></ul><
+/div>
+\end_layout
+
+\begin_layout Section
+Install
+\end_layout
+
+\begin_layout Verse
+description=Install OpenUDC
+\end_layout
+
+\begin_layout Verse
+keywords=free money
+\end_layout
+
+\begin_layout Subsection
+To get all sources
+\end_layout
+
+\begin_layout Quote
+wget https://github.com/Open-UDC/open-udc/archive/v0.2.0.tar.gz
+\end_layout
+
+\begin_layout Subsection
+Install Lud: OpenUDC Client
+\end_layout
+
+\begin_layout Standard
+Get sources
+\end_layout
+
+\begin_layout Quote
+git clone https://github.com/Open-UDC/lud
+\end_layout
+
+\begin_layout Standard
+Install
+\end_layout
+
+\begin_layout Quote
+cd lud
+\end_layout
+
+\begin_layout Quote
+make install
+\end_layout
+
+\begin_layout Standard
+Now you can launch lud main menu:
+\end_layout
+
+\begin_layout Quote
+lud.sh
+\end_layout
+
+\begin_layout Standard
+Now you can choose in the menu : 
+\end_layout
+
+\begin_layout Itemize
+It asks you informations (place of birth, date of birth, last name, first
+ name) in order to generate a UDID2 certificate needed to be with you unique
+ OpenGPG/OpenUDC key ID.
+\end_layout
+
+\begin_layout Itemize
+When your certificate is generated, it shows a menu.
+ 
+\end_layout
+
+\begin_layout Itemize
+Launching the programm "seahorse" you can check your unique UDID2-OpenUDC
+ key is on the window "My personnal keys".
+ 
+\end_layout
+
+\begin_layout Itemize
+Share your KEY with an OpenUDC community Node 
+\end_layout
+
+\begin_layout Subsection
+Install OpenUDC Node (ludd)
+\end_layout
+
+\begin_layout Standard
+Prepare depends
+\end_layout
+
+\begin_layout Quote
+apt-get install libgpgme11-dev
+\end_layout
+
+\begin_layout Standard
+Get sources
+\end_layout
+
+\begin_layout Quote
+git clone https://github.com/Open-UDC/thttpgpd
+\end_layout
+
+\begin_layout Standard
+Install
+\end_layout
+
+\begin_layout Quote
+cd thttpgpd
+\end_layout
+
+\begin_layout Quote
+./configure --enable-OpenUDC
+\end_layout
+
+\begin_layout Quote
+make
+\end_layout
+
+\begin_layout Quote
+make install
+\end_layout
+
+\begin_layout Standard
+Check that /usr/local/var/ludd is created (show hidden file to see it) 
+\end_layout
+
+\begin_layout Quote
+ls -a /usr/local/var/ludd
+\end_layout
+
+\begin_layout Standard
+Type the command :
+\end_layout
+
+\begin_layout Quote
+ludd_init.sh
+\end_layout
+
+\begin_layout Quote
+ludd
+\end_layout
+
+\begin_layout Standard
+You can check your local adress : http://127.0.0.1:11371/ and so access to
+ your OpenUDC LUDD node 
+\end_layout
+
+\begin_layout Standard
+You can always retrying the process of compiling / installing with the commands
+ :
+\end_layout
+
+\begin_layout Quote
+sudo make distclean 
+\end_layout
+
+\begin_layout Quote
+./configure && make 
+\end_layout
+
+\begin_layout Quote
+sudo make uninstall
+\end_layout
+
+\begin_layout Quote
+sudo make install
+\end_layout
+
+\begin_layout Section
+Contribute
+\end_layout
+
+\begin_layout Verse
+description=Contribute to OpenUDC
+\end_layout
+
+\begin_layout Verse
+keywords=contribute,developer
+\end_layout
+
+\begin_layout Standard
+The project is still young, we need a lot of contributors for improving
+ it.
+ Feel free to join our developer and user community in using the following
+ ways.
+\end_layout
+
+\begin_layout Subsection
+Open-UDC repository
+\end_layout
+
+\begin_layout Itemize
+Github <a href="https://github.com/Open-UDC">https://github.com/Open-UDC</a>
+\end_layout
+
+\begin_layout Itemize
+Bug trackers <a href="https://github.com/Open-UDC/open-udc/issues">https://github.
+com/Open-UDC/open-udc/issues</a>
+\end_layout
+
+\begin_layout Section
+Contact
+\end_layout
+
+\begin_layout Verse
+description=Contact and follow the team
+\end_layout
+
+\begin_layout Verse
+keywords=contribute,developer,contact
+\end_layout
+
+\begin_layout Subsection
+Contacts
+\end_layout
+
+\begin_layout Itemize
+Chartroom Jabber/XMPP: "open-udc@muc.jappix.com"
+\end_layout
+
+\begin_layout Itemize
+Mailing list "openudc AT googlegroups DOT com" <a href="https://groups.google.com/
+forum/#!forum/openudc">https://groups.google.com/forum/#!forum/openudc</a>
+\end_layout
+
+\begin_layout Subsection
+Chat-room how-to
+\end_layout
+
+\begin_layout Standard
+Join the chat-room at "open-udc@muc.jappix.com".
+\end_layout
+
+\begin_layout Standard
+You can easily create an XMPP account on <a href="https://jappix.com">https://jap
+pix.com</a> or on any over XMPP provider: <a href="http://xmpp.net">http://xmpp.net
+</a>.
+\end_layout
+
+\begin_layout Standard
+After you can:
+\end_layout
+
+\begin_layout Itemize
+clicking on Discussion in the bottom right hand corner of the OpenUDC web
+ site;
+\end_layout
+
+\begin_layout Itemize
+using the Jabber compatible web-client Jappix;
+\end_layout
+
+\begin_layout Itemize
+using MiniJappix on your own site;
+\end_layout
+
+\begin_layout Itemize
+install and use a free XMPP client (probably the best way).
+\end_layout
+
+\begin_layout Standard
+Recommended XMPP clients: <a href="http://gajim.org/">Gajim</a>, <a href="http://
+psi-plus.com/">PSI+</a>.
+\end_layout
+
+\begin_layout Section
+FAQ
+\end_layout
+
+\begin_layout Subsubsection
+What are the step needed to join an Open-UDC community ?
+\end_layout
+
+\begin_layout Enumerate
+Create a OpenPGP key with an UDID2 OpenUDC comment.
+ (see GLUD at <a href ="http://node1.openudc.org:11371/udid2/" >http://node1.openud
+c.org:11371/udid2/</a> )
+\end_layout
+
+\begin_layout Enumerate
+Your key must be signed by 5 or more known yet registered users within the
+ community (at least enough to be valid with GnuPG's default criteria)
+\end_layout
+
+\begin_layout Enumerate
+You learn to use LUD or GLUD client to connect to a LUDD node.
+\end_layout
+
+\begin_layout Enumerate
+You are in.
+\end_layout
+
+\begin_layout Subsubsection
+What mean M, N, c in OpenUDC concepts ?
+\end_layout
+
+\begin_layout Standard
+M or M(t) means the whole monetary Mass, the sum of all unit coins within
+ the community at the date "t".
+ N or N(t) mean the total of registered users inside the community at the
+ date "t".
+ The parameter "c" is used as the &#37; of monetary mass growth per time
+ unit (ex : &#37; per year or &#37; per month).
+\end_layout
+
+\begin_layout Subsubsection
+What are LUD, GLUD, LUDD, UDID2 ?
+\end_layout
+
+\begin_layout Itemize
+LUDD is the free software that run an OpenUDC P2P node.
+\end_layout
+
+\begin_layout Itemize
+LUD is the free software OpenUDC standard client.
+ LUD means "LUD Universal Dividend" able to connect to a LUDD node.
+ You must install LUD on your own machine.
+\end_layout
+
+\begin_layout Itemize
+GLUD is a graphical web interface for LUD with a development version here
+ : http://node1.openudc.org:11371/udid2/ 
+\end_layout
+
+\begin_layout Itemize
+UDID2 is OpenUDC information needed to add to OpenPGP keys to become candidate
+ to OpenUDC PGP keys.
+ (see more information in technical specficications for developpers).
+\end_layout
+
+\begin_layout Subsubsection
+What are the rules of OpenUDC Universal Dividend creation ?
+\end_layout
+
+\begin_layout Standard
+The rules (for the development standard) are defined as a time function
+ UD(t), defined following Relative Money Theory (TRM in french) as a differentia
+l dividend : The quantitative dividend must change with only differential
+ (small) adds, reaching in relative amount "c" for the average long term
+ growth.
+\end_layout
+
+\begin_layout Itemize
+UD(0) = 100 Q 
+\end_layout
+
+\begin_layout Itemize
+UD(t+1) = MAX [UD(t) ; c*M(t)/N(t)]
+\end_layout
+
+\begin_layout Standard
+Where "t" is the past month.
+ UD(t) is the UD of past month.
+ "c" is the minimal &#37; UD growth as defined in the 4th rule.
+ M(t) is the existing monetary mass, and N(t) is the total amount of members.
+ All are values just before calculation of new monthly UD(t+1):
+\end_layout
+
+\begin_layout Itemize
+c = ln(ev:2) / (ev:2)
+\end_layout
+
+\begin_layout Standard
+c is defined here as the quantitative average monetary mass growth based
+ on human average life expectancy.
+ For a 80 years average life expectancy we have:
+\end_layout
+
+\begin_layout Itemize
+c = ln(40) / 40 = 9&#37; / year.
+\end_layout
+
+\begin_layout Standard
+As those rules are parameters of OpenUDC, one community can use OpenUDC
+ with other set of rules.
+ OpenUDC is totally independant of the rules chosen by a money community.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Why OpenUDC contributors say "there is no inflation" since we have a Monetary
+ growth ?
+\end_layout
+
+\begin_layout Standard
+Because inflation is a false conclusion due to ignorance relativaly to a
+ bad unit of money because the Quantative units of money growth due to Universal
+ Dividend is not the Relative one.
+\end_layout
+
+\begin_layout Standard
+An OpenUDC community use the relative unit 1 UD, and not the quantitative
+ 1 Q.
+ So there is still in the money system the same number of money units N
+ / c UD.
+ And then the number of UD money units only depend of the number of members,
+ and the average amount of money per member is always fix or limited by
+ 1 / c UD.
+\end_layout
+
+\begin_layout Standard
+So inflation is not a problem in Universal Dividend money system, because
+ there is Quantitave creation but not Relative money creation and we count
+ in number of Universal Dividend, the Relative Unit.
+ 
+\end_layout
+
+\begin_layout Standard
+Inflation is only a problem in non-free money system when some individuals
+ create money for their own benefit and to the detriment of others, and
+ so the problem is due to that non-free money model.
+\end_layout
+
+\end_body
+\end_document
