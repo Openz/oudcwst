@@ -1,4 +1,7 @@
 <?php
+print "<h2>";
+printf(_("Frequently asked questions"));
+print "</h2>";
 print "<h3>";
 printf(_("What are the step needed to join an Open-UDC community ?"));
 print "</h3>";

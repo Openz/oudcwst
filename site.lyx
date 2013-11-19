@@ -68,7 +68,7 @@
 \begin_body
 
 \begin_layout Title
-lOpenUDC
+OpenUDC
 \begin_inset Newline newline
 \end_inset
 
@@ -80,11 +80,15 @@ Pierro
 \end_layout
 
 \begin_layout Section
-Project1
+Project
 \end_layout
 
 \begin_layout Subsection
 OpenUDC project
+\end_layout
+
+\begin_layout Verse
+ptitle=OpenUDC project
 \end_layout
 
 \begin_layout Verse
@@ -326,14 +330,22 @@ Install
 \end_layout
 
 \begin_layout Verse
-description=Install OpenUDC
+ptitle=Install OpenUDC
 \end_layout
 
 \begin_layout Verse
-keywords=free money
+description=How to install OpenUDC
+\end_layout
+
+\begin_layout Verse
+keywords=install,openUDC,free money
 \end_layout
 
 \begin_layout Subsection
+Install
+\end_layout
+
+\begin_layout Subsubsection
 To get all sources
 \end_layout
 
@@ -341,7 +353,7 @@ To get all sources
 wget https://github.com/Open-UDC/open-udc/archive/v0.2.0.tar.gz
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Install Lud: OpenUDC Client
 \end_layout
 
@@ -398,7 +410,7 @@ Launching the programm "seahorse" you can check your unique UDID2-OpenUDC
 Share your KEY with an OpenUDC community Node 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Install OpenUDC Node (ludd)
 \end_layout
 
@@ -489,11 +501,19 @@ Contribute
 \end_layout
 
 \begin_layout Verse
-description=Contribute to OpenUDC
+ptitle=Contribute to OpenUDC
+\end_layout
+
+\begin_layout Verse
+description=How to contribute to OpenUDC
 \end_layout
 
 \begin_layout Verse
 keywords=contribute,developer
+\end_layout
+
+\begin_layout Subsection
+Contribute to OpenUDC
 \end_layout
 
 \begin_layout Standard
@@ -503,7 +523,7 @@ The project is still young, we need a lot of contributors for improving
  ways.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Open-UDC repository
 \end_layout
 
@@ -521,6 +541,10 @@ Contact
 \end_layout
 
 \begin_layout Verse
+ptitle=Contact OpenUDC team
+\end_layout
+
+\begin_layout Verse
 description=Contact and follow the team
 \end_layout
 
@@ -532,16 +556,16 @@ keywords=contribute,developer,contact
 Contacts
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Chartroom Jabber/XMPP: "open-udc@muc.jappix.com".
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Mailing list "openudc AT googlegroups DOT com" <a href="https://groups.google.com/
 forum/#!forum/openudc">https://groups.google.com/forum/#!forum/openudc</a>.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Chat-room how-to
 \end_layout
 
@@ -583,6 +607,22 @@ psi-plus.com/">PSI+</a>.
 
 \begin_layout Section
 FAQ
+\end_layout
+
+\begin_layout Verse
+ptitle=FAQ OpenUDC
+\end_layout
+
+\begin_layout Verse
+description=Frequently asked questions
+\end_layout
+
+\begin_layout Verse
+keywords=faq,developer,contact
+\end_layout
+
+\begin_layout Subsection
+Frequently asked questions
 \end_layout
 
 \begin_layout Subsubsection

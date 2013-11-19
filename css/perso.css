@@ -1,18 +1,15 @@
 .top-bar {
-/*	opacity: 0.9;
-background-color:#1B1B1B;*/
-
-background : url(../img/bg.png) repeat-x;
-background-color:#1b5f1b;
+  background : url(../img/bg.png) repeat-x;
+  background-color:#1b5f1b;
 }
 
-
-
 .bottom-bar {
-background : url(../img/bg2.png) repeat-x;
-background-color:#1b5f1b;
+  background : url(../img/bg2.png) repeat-x;
+  background-color:#1b5f1b;
+}
 
-
+body.with-top-bar {
+  padding-top: 55px;
 }
 
 a,
@@ -27,17 +24,13 @@ a:visited {
   border: 1px solid #ddddd;
 }
 
-
-
 .breadcrumb li:not(:last-child):after {
   content: '   ';
 }
 
 .breadcrumb li a {
-color: #1b5f1b;
+ color: #1b5f1b;
 }
-
-
 
 .fig_comment
 {
@@ -54,26 +47,22 @@ text-align: center;
 
 }
 .menu {
-
   background: #1b5f1b;
-
 }
 .menu li a {
-background : url(../img/bg.png) repeat-x;
+  background : url(../img/bg.png) repeat-x;
   text-decoration: none;
   color: #ffffff;
 }
 .menu > li:hover > a {
-
-background : url(../img/bg.png) repeat-x;
-background-color:#459b45;
+  background : url(../img/bg.png) repeat-x;
+  background-color:#459b45;
 }
 
-.leaflet-top {
-	top: 43px;
+.sub-menu li {
+  background: #1b5f1b;
 }
-.masthead{background:#9292e8;color:#fff;padding:20px 0;}
-
-.z{;position:fixed;}
-
-
+.sub-menu li a:hover {
+  background : url(../img/bg.png) repeat-x;
+  background-color: #459b45;
+}

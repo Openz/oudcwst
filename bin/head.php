@@ -78,9 +78,9 @@ function head_page($pid) {
 	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="'. strtolower($_SESSION['lg']) .'" xmlns="http://www.w3.org/1999/xhtml" lang="'. strtolower($_SESSION['lg']) .'">
 <head>';
-
+echo $title;
 	echo "\n";
-	echo '<title>'. $title .'</title> ';
+	echo '<title>'. $ptitle .'</title> ';
 	echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>';
 	echo "\n";
 	echo '<meta name="description" content="'. $description .'" />';
@@ -99,7 +99,7 @@ function head_page($pid) {
 
 }
 
-head_page('0');
+head_page($pid);
 
 echo '<script type="text/javascript" src="js/jquery.js"></script>';
 echo '<script type="text/javascript" src="js/jquery.ministrap.min.js"></script>';

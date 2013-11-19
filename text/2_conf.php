@@ -1,6 +1,6 @@
 <?php
-$title=_("Contribute");
 $page="contribute.php";
-$description=_("Contribute to OpenUDC");
+$ptitle=_("Contribute to OpenUDC");
+$description=_("How to contribute to OpenUDC");
 $keywords=_("contribute,developer");
 ?>
