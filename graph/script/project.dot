@@ -1,0 +1,51 @@
+digraph G { 
+node [fontsize=30];
+ordering=out;
+node [style=filled,color=white];
+
+n1[
+label="Coin management"
+];
+n2[
+label="Inter-node Communication"
+];
+n3[
+label="Transaction API"
+];
+n4[
+label="Tools API"
+];
+
+
+u1[
+label="Smarthpone payement tools"
+];
+u2[
+label="Web Payement"
+];
+u3[
+label="Web Tools"
+];
+
+
+subgraph cluster_1 
+{
+
+label="Appel téléphonique";
+fontsize = "35";
+labeljust = "l";
+style=filled;
+color= "#ade6bf";
+n1->n2
+n2->n1
+n3->n1
+n4->n1
+}
+
+u3 -> n4
+u2-> n3
+u3 -> n4
+
+
+
+}
