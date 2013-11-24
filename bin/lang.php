@@ -11,7 +11,13 @@ else {
 }
 
 
-
+if ( $lg && array_key_exists($lg, $_SESSION['lang_ref']) ) {
+	$_SESSION['lg']=$lg;
+	
+}
+else {
+	$_SESSION['lg']='en';
+}
 
 
 

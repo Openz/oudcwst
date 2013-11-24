@@ -5,7 +5,9 @@ if (! isset( $_SESSION['lg'] ) OR isset($_GET['hl']) ) {
 	include_once("./bin/lang.php");
 }
 
-
+if ($_SESSION['lg'] != $lg ) {
+	include_once("./bin/lang.php");
+}
 $lang= $_SESSION['lang_ref'][$_SESSION['lg']].'.utf8';
 $filename="message";
 putenv("LC_ALL=$lang");
@@ -19,9 +21,9 @@ textdomain($filename);
 //	include_once("./bin/conf.php");
 //}
 
-if (! isset( $_SESSION['init'] ) ) {
-	include_once("./conf/init.php");
-}
+//if (! isset( $_SESSION['init'] ) ) {
+//	include_once("./conf/init.php");
+//}
 
 function close_page() {
 exit();
@@ -73,12 +75,12 @@ function head_page($pid) {
 
 
 	include_once("./text/". $pid ."_conf.php");
-
+$GLOBALS["page"]=$page;
 	$GLOBALS["lock_hp"]=1;
 	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="'. strtolower($_SESSION['lg']) .'" xmlns="http://www.w3.org/1999/xhtml" lang="'. strtolower($_SESSION['lg']) .'">
 <head>';
-echo $title;
+
 	echo "\n";
 	echo '<title>'. $ptitle .'</title> ';
 	echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>';
@@ -101,8 +103,22 @@ echo $title;
 
 head_page($pid);
 
-echo '<script type="text/javascript" src="js/jquery.js"></script>';
-echo '<script type="text/javascript" src="js/jquery.ministrap.min.js"></script>';
+//echo '<script type="text/javascript" src="js/jquery.js"></script>';
+echo '<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>';
+
+echo '<script type="text/javascript" src="js/jquery.ministrap.min.js"></script>
+<script type="text/javascript">
+   jQuery.ajaxSetup({cache: true});
+   
+   jQuery.getScript("https://static.jappix.com/php/get.php?l=en&t=js&g=mini.xml", function() {
+      MINI_GROUPCHATS = ["open-udc@muc.jappix.com"];
+      launchMini(false, true, "anonymous.jappix.com");
+   });
+</script>
+
+
+';
+
 
 echo "\n";
 
@@ -128,7 +144,9 @@ echo '
 echo '
 			<div class="span3">
 				<div class="align-center" >
-					<a href="index.php"><img src="img/logo-open-udc.svg" alt="Logo"  width="80%" /></a>
+					<a href="index.php_'. $_SESSION['lg'] .'"><img src="img/logo-open-udc.svg" alt="Logo"  width="80%" /></a><br/>
+					<img src="img/open-udc-text.svg" alt="Text"  width="80%" /><br/><br/>
+					<img src="img/open-udc-slogan.svg" alt="Slogan"  width="80%" />
 
 				</div>
 			</div>
@@ -141,10 +159,15 @@ echo '
 
 
 echo '<div class="bottom-bar">';
-echo $_SESSION['bar'];
+
+echo '<div class="to-top"></div><div class="bottom-bar">Open udc';
+echo '</div>';
 
 echo '
 </div>';
+
+
+
 
 echo'  </body>
 </html>';

@@ -1,4 +1,5 @@
 <?php
-$pid="0";
+$lg="en";
+$pid="1";
 include_once("./bin/head.php");
 ?>

@@ -1,13 +1,22 @@
-	<div class="row">
+<?php
+/*$menu = '<li><a href="index_'. $_SESSION['lg'] .'.php">&nbsp;'. _("Project") .'&nbsp;</a></li>';
+$menu .= '<li><a href="install_'. $_SESSION['lg'] .'.php">&nbsp;'. _("Install") .'&nbsp;</a></li>';
+$menu .= '<li><a href="contribute_'. $_SESSION['lg'] .'.php">&nbsp;'. _("Contribute") .'&nbsp;</a></li>';
+$menu .= '<li><a href="contact_'. $_SESSION['lg'] .'.php">&nbsp;'. _("Contact") .'&nbsp;</a></li>';
+$menu .= '<li><a href="faq_'. $_SESSION['lg'] .'.php">&nbsp;'. _("FAQ") .'&nbsp;</a></li>';*/
+echo '	<div class="row">
 			<div class="span9">
-				<ul class="breadcrumb">
-					<li><a href="index.php"><?php printf(_("Project")); ?></a></li>
-					<li><a href="install.php"><?php printf(_("Install")); ?></a></li>
-					<li><a href="contribute.php"><?php printf(_("Contribute")); ?></a></li>
-					<li><a href="contact.php"><?php printf(_("Contact")); ?></a></li>
-					<li><a href="faq.php"><?php printf(_("FAQ")); ?></a></li>
+				<ul class="breadcrumb">';
 
-				</ul>
-			</div>
-			<div class="span3"><ul class="breadcrumb"><li><a href="<?php echo $_SERVER['PHP_SELF'] ?>?hl=en">EN</a></li><li><a href="<?php echo $_SERVER['PHP_SELF'] ?>?hl=fr">FR</a></li></ul></div>
-	</div>
+echo '<li><a href="index_'. $_SESSION['lg'] .'.php">'. _("Project") .'</a></li>';
+echo '<li><a href="install_'. $_SESSION['lg'] .'.php">'. _("Install") .'</a></li>';
+echo '<li><a href="contribute_'. $_SESSION['lg'] .'.php">'. _("Contribute") .'</a></li>';
+echo '<li><a href="contact_'. $_SESSION['lg'] .'.php">'. _("Contact") .'</a></li>';
+echo '<li><a href="faq_'. $_SESSION['lg'] .'.php">'. _("FAQ") .'</a></li>';
+
+echo '				</ul>';
+echo '			</div>';
+echo '			<div class="span3"><ul class="breadcrumb"><li><a href="'. $page .'_en.php">EN</a></li><li><a href="'. $page .'_fr.php">FR</a></li></ul></div>';
+echo '	</div>';
+
+?>

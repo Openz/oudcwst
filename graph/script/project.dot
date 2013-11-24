@@ -4,34 +4,61 @@ ordering=out;
 node [style=filled,color=white];
 
 n1[
-label="Coin management"
+label="Coin management\nC\n80%"
+URL="http://wiki.openudc.org/web_payement"
 ];
 n2[
-label="Inter-node Communication"
+label="Inter-node communication\nC\n5%"
+URL="http://wiki.openudc.org/web_payement"
 ];
 n3[
-label="Transaction API"
+label="Transaction API\nC\n30%"
+URL="http://wiki.openudc.org/web_payement"
 ];
 n4[
-label="Tools API"
+label="Tools API\nKey signing\nC\n0%"
+URL="http://wiki.openudc.org/web_payement"
 ];
 
 
 u1[
-label="Smarthpone payement tools"
-];
-u2[
-label="Web Payement"
-];
-u3[
-label="Web Tools"
+label="Payement\nND\n0%"
+URL="http://wiki.openudc.org/web_payement"
 ];
 
 
+wu1[
+label="Payement\nND\n0%"
+URL="http://wiki.openudc.org/web_payement"
+];
+wu2[
+label="Tools\nND\n0%"
+URL="http://wiki.openudc.org/web_payement"
+];
+
+lu1[
+label="Payement gui\nND\n0%"
+URL="http://wiki.openudc.org/web_payement"
+];
+lu2[
+label="Tools gui\nND\n0%"
+URL="http://wiki.openudc.org/web_payement"
+];
+lu3[
+label="Comand line\npayement & tools\nBash/C\n40%"
+URL="http://wiki.openudc.org/web_payement"
+];
+
+
+
+cgi[
+label="Fast CGI\nND/Python\n0%"
+URL="http://wiki.openudc.org/web_payement"
+];
 subgraph cluster_1 
 {
 
-label="Appel téléphonique";
+label="Node";
 fontsize = "35";
 labeljust = "l";
 style=filled;
@@ -41,11 +68,61 @@ n2->n1
 n3->n1
 n4->n1
 }
+subgraph cluster_11
+{
 
-u3 -> n4
-u2-> n3
-u3 -> n4
+label="";
+fontsize = "35";
+labeljust = "l";
+style=filled;
+color= "#ade6bf";
+cgi
+}
 
+subgraph cluster_2 
+{
 
+label="Web User Tools";
+fontsize = "35";
+labeljust = "l";
+style=filled;
+color="#b1ade6";
+wu1;wu2
+}
 
+subgraph cluster_3 
+{
+
+label="Local User Tools";
+fontsize = "35";
+labeljust = "l";
+style=filled;
+color="#adc4e6";
+lu1;lu2;lu3
+}
+subgraph cluster_4
+{
+
+label="Smartphone User Tools";
+fontsize = "35";
+labeljust = "l";
+style=filled;
+color="#7c93a0"
+u1
+}
+
+#wu2 -> n4
+#wu1-> n3
+wu2 -> cgi
+wu1-> cgi
+cgi-> n4
+cgi-> n3
+
+u1 -> n3
+n2 -> n2
+
+lu2 -> n4
+lu1-> n3
+lu3 -> n4
+lu3-> n3
 }

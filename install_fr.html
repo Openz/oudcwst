@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<title>Installer OpenUDC</title> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="Installer OpenUDC" />
+<meta name="keywords" content="install,openUDC,free money" /> 
+<link href="css/ministrap.css" rel="stylesheet" type="text/css" />
+<link href="css/perso.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="with-top-bar">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script><script type="text/javascript" src="js/jquery.ministrap.min.js"></script>
+<script type="text/javascript">
+   jQuery.ajaxSetup({cache: true});
+   
+   jQuery.getScript("https://static.jappix.com/php/get.php?l=en&t=js&g=mini.xml", function() {
+      MINI_GROUPCHATS = ["open-udc@muc.jappix.com"];
+      launchMini(false, true, "anonymous.jappix.com");
+   });
+</script>
+
+
+
+<div class="top-bar">
+	<div class="container">
+		<div class="row">
+			<div class="span3 align-left" >
+				<a href="index.php" class="logo">OpenUDC</a>
+			</div>
+				<div class="span9 align-right" >
+
+					<ul class="menu" >
+						<li class="has-sub">
+								<a href="index.php">Home</a>
+
+								<ul class="sub-menu"><li><a href="index_fr.php">Project&nbsp</a></li><li><a href="install_fr.php">Installer&nbsp;</a></li><li><a href="contribute_fr.php">Contribute&nbsp;</a></li><li><a href="contact_fr.php">Contact&nbsp;</a></li><li><a href="faq_fr.php">FAQ&nbsp;</a></li>								</ul>
+						</li>
+						<li><a href="http://openudc.org">Blog</a></li>
+						<li><a href="https://github.com/Open-UDC">GitHub</a></li>	
+					</ul>	
+				</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">	<div class="row">
+			<div class="span9">
+				<ul class="breadcrumb"><li><a href="index_fr.php">Project</a></li><li><a href="install_fr.php">Installer</a></li><li><a href="contribute_fr.php">Contribute</a></li><li><a href="contact_fr.php">Contact</a></li><li><a href="faq_fr.php">FAQ</a></li>				</ul>			</div>			<div class="span3"><ul class="breadcrumb"><li><a href="install_en.php">EN</a></li><li><a href="install_fr.php">FR</a></li></ul></div>	</div>
+	<div class="row">
+
+			<div class="span9"><h2>Installer</h2><h3>Obtenir toutes les sources</h3><pre>wget https://github.com/Open-UDC/open-udc/archive/v0.2.0.tar.gz</pre><h3>Installer  Lud: OpenUDC Client</h3><p>Obtenir les sources</p><pre>git clone https://github.com/Open-UDC/lud</pre><p>Installer</p><pre>cd lud</pre><pre>make install</pre><p>Now you can launch lud main menu:</p><pre>lud.sh</pre><p>Now you can choose in the menu : </p><ul><li>It asks you informations (place of birth, date of birth, last name, first name) in order to generate a UDID2 certificate needed to be with you unique OpenGPG/OpenUDC key ID.</li><li>When your certificate is generated, it shows a menu. </li><li>Launching the programm "seahorse" you can check your unique UDID2-OpenUDC key is on the window "My personnal keys". </li><li>Share your KEY with an OpenUDC community Node </li></ul><h3>Installer OpenUDC Node (ludd)</h3><p>Préparez les dépendances</p><pre>apt-get install libgpgme11-dev</pre><p>Obtenir les sources</p><pre>git clone https://github.com/Open-UDC/thttpgpd</pre><p>Installer</p><pre>cd thttpgpd</pre><pre>./configure --enable-OpenUDC</pre><pre>make</pre><pre>make install</pre><p>Vérifier si le répertoire /usr/local/var/ludd est crée</p><pre>ls -a /usr/local/var/ludd</pre><p>Tapez la commande:</p><pre>ludd_init.sh</pre><pre>ludd</pre><p>Testez sur votre explorateur l'adresse :  http://127.0.0.1:11371/ et vous accédez au noeud OpenUDC</p><p>Vous pouvez réessayer l'installation:</p><pre>sudo make distclean </pre><pre>./configure &amp;&amp; make </pre><pre>sudo make uninstall</pre><pre>sudo make install</pre>
+		</div>
+			<div class="span3">
+				<div class="align-center" >
+					<a href="index.php_fr"><img src="img/logo-open-udc.svg" alt="Logo"  width="80%" /></a><br/>
+					<img src="img/open-udc-text.svg" alt="Text"  width="80%" /><br/><br/>
+					<img src="img/open-udc-slogan.svg" alt="Slogan"  width="80%" />
+
+				</div>
+			</div>
+
+		</div>
+	</div><div class="bottom-bar"><div class="to-top"></div><div class="bottom-bar">Open udc</div>
+</div>  </body>
+</html>

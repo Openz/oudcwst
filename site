@@ -1,0 +1,289 @@
+#! /bin/bash
+#chmod -R 555 /web/site/www; chmod -R 550 /web/site/www/bin /web/site/www/text/
+
+#chmod -R 555 /web/site/www
+
+
+# xgettext --from-code=UTF-8 -o messages.pot *.php
+#  msgmerge -s -U oriya.po hello-new.pot
+
+
+
+if [[ ! $1 ]]; then
+	echo "Nom du fichier en argument"
+	echo "bash site XX.lyx"
+	exit 
+fi
+
+if [[ $2 ]]; then
+xlg=$2
+else
+	echo "Nom des langues forcé, en en premier"
+	echo "bash site XX.lyx en,fr,sp"
+	exit
+fi
+
+mkdir -p ./text
+
+#LG=$(echo ${1} | awk -F"." '{print $1}' | awk -F"_" '{print $2}')
+
+cat ${1} | awk -v xlg="${xlg}" '
+BEGIN{
+
+section=0
+
+	lgsep=""
+	if (xlg) {
+		split(xlg,lg,",")
+print xlg
+		lgsep="_"
+	}
+
+}
+{
+
+
+
+  if ($0 ~ /\\begin_layout Section/ ) {
+	if (out){print "?>" > out;	print "?>" > out_conf }
+  out= "./text/" section ".php"
+  out_conf= "./text/" section "_conf.php"
+  out_droite = "./text/" section "_r.php"
+
+  section++
+
+  print "<?php" > out 
+
+# Ne imprime pas les sections
+  NREF=NR
+  active="h1"
+
+  }
+
+  if ($0 ~ /\\begin_layout Subsection/ ) {
+  NREF=NR
+  active="h2"
+  }
+
+  if ($0 ~ /\\begin_layout Subsubsection/ ) {
+  NREF=NR
+  active="h3"
+  }
+
+  if ($0 ~ /\\begin_layout Standard/ ) {
+  NREF=NR
+  active="p"
+  }
+
+  if ($0 ~ /\\begin_layout Verse/ ) {
+  NREF=NR
+  active="conf"
+  }
+
+  if ($0 ~ /\\begin_layout Quote/ ) {
+  NREF=NR
+  active="pre"
+  }
+
+  if ($0 ~ /\\begin_layout LyX-Code/ ) {
+  NREF=NR
+  active="1"
+  }
+  if ($0 ~ /\\begin_layout Quotation/) {
+  NREF=NR
+  active="2"
+  }
+
+  if ($0 ~ /\\begin_layout Itemize/ ) {
+    if (active = "li" && active_old != "li")
+    {
+    print "print \"<ul>\";" > out
+    }
+  NREF=NR
+  active="li"
+ittype="ul"
+  }
+
+  if ($0 ~ /\\begin_layout Enumerate/ ) {
+    if (active = "li" && active_old != "li")
+    {
+    print "print \"<ol>\";" > out
+    }
+  NREF=NR
+  active="li"
+ittype="ol"
+  }
+
+
+
+  if ($0 ~ /\\begin_inset Quotes/ ) {
+  mem=mem"\""
+  }
+
+
+
+  if ($0 ~ /begin{framed}/ ) {
+  print "print \"        <div class=\047box\047>\";"  > out
+    active_old=active
+    active=""
+    mem=""
+  }
+  if ($0 ~ /end{framed}/ ) {
+  print "print \"        </div><!-- box -->\";"  > out
+    active_old=active
+    active=""
+    mem=""
+  }
+
+
+
+  if ($0 ~ /\lyxline/ || $0 ~ /CommandInset line/ ) {
+  out= out_droite
+    active=""
+  }
+
+  # Sort le texte
+  if ( active && $1 ~ /\\end_layout/ ) {
+
+    # Traite le titre différament pour créer une page dédiée
+    if (active == "h1") {
+    page=mem
+    gsub( " " , "_" , page)
+    gsub( /é|è|ê/ , "e" , page)
+    gsub( /à|â/ ,   "a" , page)
+    gsub( /ù|û/ ,   "u" , page)
+    page=tolower(page)
+    page=page 
+    
+    if (section == "1") { 
+    page="index"
+    }
+
+
+    #Fichier de conf de la page
+    print "<?php" > out_conf
+#	print "$title=_(\"" mem "\");"  > out_conf
+    print "$page=\"" page "\";" > out_conf
+
+
+	if (! lg[1] ){
+    print "<?php" > page ".php"
+    print "$pid=\"" section-1 "\";" > page ".php"
+    print "include_once(\"./bin/head.php\");" > page ".php"
+    print "?>" > page ".php"
+	}
+
+	if (lg[1]){
+		for ( var in lg) {
+			    print "<?php" > page lgsep lg[var] ".php"
+				print "$lg=\""lg[var]"\";" >  page lgsep lg[var] ".php"
+				print "$pid=\"" section-1 "\";" >  page lgsep lg[var] ".php"
+				print "include_once(\"./bin/head.php\");" >  page lgsep lg[var] ".php"
+				print "?>" >  page lgsep lg[var] ".php"
+
+		}
+	}
+
+	
+
+    mem=""
+    next
+    }
+
+    # Récupere les lycode pour la configuration
+    if (active == "conf") {
+#	a=sprintf("%s",mem)
+split(mem,memm,"=")
+	gsub("=","=\"",memm[2]);
+    print "$" memm[1] "=_(\"" memm[2] "\");" > out_conf
+
+    mem=""
+    next
+    }
+
+    if (active == "php") {
+    print $0 > page ".php"
+ print $0 > "w"
+    mem=""
+	next
+    }
+
+    # Mise en forme
+    gsub( "\n" , "" , mem)
+    gsub( "  " , " " , mem)
+
+		  # Les actifs à 1 impriment pas de balises, exemple: pour du code php dans le texte
+	if ( active != "1" && active != "2" ) {
+		print "print \"<"active">\";"  > out
+
+			# Ne pas traduir les lignes de commandes
+			if ( active != "pre") {
+
+				print "printf(_(\"" mem "\"));"  > out
+			}
+			else {
+				print "print \"" mem "\" ;"  > out
+			}
+		# Fermeture des balises
+		print "print \"</"active">\";"  > out
+		}
+	if ( active == "1") {
+			print  "print \""mem "\";"   > out
+	}
+
+
+	if ( active == "2") {
+			gsub(/\\"/,"\"",mem)
+			print  mem   > out
+
+	}
+
+    # Nettoyage des variables
+    active_old=active
+    active=""
+    mem=""
+    
+
+   # 
+
+  }
+
+
+
+
+  # Ouverture des balises
+  if ( active && NR == NREF ) {
+    # Fermeture des balise particulière ul
+    if (active_old == "li" && active != "li")
+    {
+		if (ittype=="ol"){
+   			 print "print \"</ol>\";"  > out
+		}
+
+		if (ittype=="ul"){
+   			 print "print \"</ul>\";"  > out
+		}
+		ittype=""
+    }
+
+  }
+
+  # Memorise le texte
+  if ( active && NR > NREF && $1 !~ /^\\/ && $1 !~ /^status/ && $1 !~ /framed/) {
+     a=$0
+     gsub( /"/ ,   "\\\"" , a)
+
+     mem= mem a
+  }
+
+
+
+
+}END{print "?>" > out }'
+
+mkdir -p locale
+xgettext --from-code=UTF-8 -o ./locale/messages.pot ./text/*.php
+msgmerge -s -U locale/fr_FR/LC_MESSAGES/message.po ./locale/messages.pot
+msgmerge -s -U locale/sp_SP/LC_MESSAGES/message.po ./locale/messages.pot
+
+
